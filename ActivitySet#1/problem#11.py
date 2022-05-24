@@ -1,3 +1,3 @@
-# Tuples
+# Why Program
 
-filename = "dataset/mbox-short.txt"
+print("hello world")
