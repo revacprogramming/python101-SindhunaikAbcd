@@ -1,61 +1,22 @@
 # Lists
-#method-1
 
-filename = "dataset/romeo.txt"
+filename = "mbox-short.txt"
+count = 0
+total = 0
 fname = input("Enter file name: ")
-fh = open(fname)
-lst = list()
+try:
+	fh = open(fname)
+except:
+  	print("file is not found")
+
 for line in fh:
-    line=line.strip()
-    words=line.split()
-    for nword in words:
-        if not nword in lst:
-            lst.append(nword)       
-lst.sort()
-print(lst)
-
-# or
-#method-2
-
-#fname = input("Enter file name: ")
-#fh = open(fname)
-#lst = list()
-#for line in fh:
-#    words=line.strip().split()
-#    for nword in words:
- #       if not nword in lst:
-  #          lst.append(nword)       
-#lst.sort()
-#print(lst)
-
-#or
-#method-3
-
-#fname = input("Enter file name: ")
-#fh = open(fname)
-#lst = list()
-#for line in fh:
- #   words=line.strip().split()
- #   for nword in words:
-#        if nword in lst:
- #           continue
-  #      else:
-   #         lst.append(nword)       
-#lst.sort()
-#print(lst)
-
-#or
-#method-4
-
-#fname = input("Enter file name: ")
-#fh = open(fname)
-#lst = list()
-#for line in fh:
-#    words=line.strip().split()
-#    for nword in words:
-#        if nword in lst:
-#            continue
-#        elif nword not in lst:
-#            lst.append(nword)
-#lst.sort()
-#print(lst)   
+	if not line.startswith("X-DSPAM-Confidence:"):
+		continue
+	else:
+		count = count+1
+		x = line.find(":")
+		y = float(line[x+1:])
+		total = total + y
+		
+avg = total/count            
+print("Average spam confidence:",avg)
