@@ -1,8 +1,9 @@
 # Strings
-
 text = "X-DSPAM-Confidence:    0.8475"
-
-x=text.find('0')
-num = text[x:]
-val = float(num)
-print(val)
+pos=text.find(':')
+#print(pos)
+val=text[pos+5:]
+#print(val)
+print(float(val))
+#dec=float(val)
+#print(dec)
