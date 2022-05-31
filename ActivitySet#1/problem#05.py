@@ -1,13 +1,19 @@
 # Functions
 
-def computepay(hrs, r):
-   if hrs<40:
-    print("",hrs*r)
-   else:
-    return(hrs*r+((hrs-40)*r*0.5))
-    
-hrs = float(input())
-r= float(input())
- 
-p = computepay(hrs, r)
-print("Pay", p)
+
+score = input("Enter Score: ")
+s = float(score)
+if s>1.0:
+    print("entered value is greater than the range")
+elif s<0.0:
+    print("entered value is less than the range")
+elif s>= 0.9:
+    print("A")
+elif s>= 0.8:
+    print("B")
+elif s>= 0.7:
+    print("C")
+elif s>= 0.6:
+    print("D")
+else:
+    print("F")
