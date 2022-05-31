@@ -1,13 +1,8 @@
-# Files
-# Use the file name mbox-short.txt as the file name
-#filename = "dataset/mbox-short.txt"
-name=input("Enter the file name: ","r")
-fhand=open(name)
-sm=0
-count=0
-fread=fhand.readlines()
-for line in fread:
-    if line.startswith("X-DSPAM-Confidence:"):
-        sm+=float(line.split()[1])
-        count+=1
-print(f"Average spam confidence: {sm/count}")     
+ (6 sloc)  117 Bytes
+   
+text = "X-DSPAM-Confidence:0.8475 "
+a = text.find('0')
+b = text.find('a:')
+value = text[a:b]
+x=float(value)
+print(x)
