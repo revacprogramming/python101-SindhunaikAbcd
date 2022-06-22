@@ -1,2 +1,8 @@
-kmlvf,xc perl,g.,lpgoe vskb, x ,lsasf
-'EQ'E',;WF,W;LFZEOFLR V ;LVRELPW
+ (6 sloc)  117 Bytes
+   
+text = "X-DSPAM-Confidence:0.8475 "
+a = text.find('0')
+b = text.find('a:')
+value = text[a:b]
+x=float(value)
+print(x)
