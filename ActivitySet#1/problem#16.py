@@ -7,3 +7,9 @@ cur = con.cursor()  #we send sql commands through cursor
 cur.excecute('Drop a table if exists')
 cur.excecute('''
 CREATE TABLE Counts(email TEXT,count INTEGER)''')...
+
+
+
+
+sindhu c naik the name the enter the printf 
+enter the name #entter the name  printf theb na,ev

@@ -1,6 +1,9 @@
 # Object Oriented Programming
-# https://www.py4e.com/lessons/Objects
-import re
-s = 'A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
-lsted = re.findall('\S+@\S+', s)
-print(lsted)
+# https://www.py4e.com/lessons/Object
+x=int(input("enter a number"))
+total=0
+for y in range(1,x+1):
+    if(y%2==0):
+        print(y)
+        total=total+y
+        print("sum of even numbers",total) 
